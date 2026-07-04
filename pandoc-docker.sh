@@ -26,4 +26,13 @@ for filename in pandoc-*yaml; do
     echo "Failure! The ${language} PDF failed to be created!"
     exit 1
   fi
+
+  # Attempt to create the EPUB
+  echo "Generating ${language} EPUB..."
+  if pandoc -d "${filename}" -t epub --epub-cover-image=wayland-logo.png -o "wayland-book.epub"; then
+    echo "Success! The ${language} EPUB has been successfully created!"
+  else
+    echo "Failure! The ${language} EPUB failed to be created!"
+    exit 1
+  fi
 done

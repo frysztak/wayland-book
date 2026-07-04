@@ -31,3 +31,4 @@ jobs:
           draft: false
           files: |
             *.pdf
+            *.epub
