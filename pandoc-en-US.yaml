@@ -11,12 +11,6 @@ metadata:
 standalone: true
 variables:
   documentclass: scrbook
-  header-includes:
-    - \usepackage{graphicx}
-    - \usepackage{titling}
-    - \newcommand{\titlesc}[1]{\textsc{#1}}
-    - \pretitle{\begin{center}\includegraphics[width=2in]{wayland-logo.png}\\\LARGE\titlesc}
-    - \posttitle{\end{center}}
   lang: en-US
   links-as-notes: true
   lot: false
@@ -28,7 +22,6 @@ variables:
   numbersections: true
 table-of-contents: true
 toc-depth: 2
-include-in-header: deeplists.tex
 verbosity: ERROR
 pdf-engine: xelatex
 input-files:

@@ -9,7 +9,7 @@ generate_pdfs() {
 
     # Attempt to create the PDF
     echo "Generating ${language} PDF..."
-    if pandoc -d "${filename}"; then
+    if pandoc -d "${filename}" -H deeplists.tex; then
       echo "Success! The ${language} PDF has been successfully created!"
     else
       echo "Failure! The ${language} PDF failed to be created!"
